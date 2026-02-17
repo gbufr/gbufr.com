@@ -1,4 +1,5 @@
 const RECAPTCHA_SITE_KEY = '6LcZBG8sAAAAAOFMNSSwyKTJZTiTr1Mnn1PAxxuL';
+const SUPABASE_ANON_KEY = 'sb_publishable_xuKuxaxIjJJ0A5k1DjAWKA_QlP86WEC';
 const EDGE_FUNCTION_URL = 'https://pudybyjjybzrgstngqix.supabase.co/functions/v1/recaptcha-waitlist';
 
 document.getElementById('waitlist-form').addEventListener('submit', function (e) {
@@ -15,7 +16,9 @@ document.getElementById('waitlist-form').addEventListener('submit', function (e)
                 const response = await fetch(EDGE_FUNCTION_URL, {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json'
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`
                     },
                     body: JSON.stringify({
                         email: email,
