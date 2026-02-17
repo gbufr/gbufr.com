@@ -1,5 +1,5 @@
 const RECAPTCHA_SITE_KEY = '6LcZBG8sAAAAAOFMNSSwyKTJZTiTr1Mnn1PAxxuL';
-const SUPABASE_ANON_KEY = 'sb_publishable_xuKuxaxIjJJ0A5k1DjAWKA_QlP86WEC';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB1ZHlieWpqeWJ6cmdzdG5ncWl4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEzNDQ5NDMsImV4cCI6MjA4NjkyMDk0M30.KRlU83jvKOGRjIIRDaDiyGJe6ZN7J0VfSBz34QOTbcI';
 const EDGE_FUNCTION_URL = 'https://pudybyjjybzrgstngqix.supabase.co/functions/v1/recaptcha-waitlist';
 
 document.getElementById('waitlist-form').addEventListener('submit', function (e) {
