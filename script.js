@@ -47,10 +47,3 @@ document.getElementById('waitlist-form').addEventListener('submit', function (e)
     });
 });
 
-// Subtle parallax effect on background
-document.addEventListener('mousemove', (e) => {
-    const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
-    const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
-    const overlay = document.querySelector('.background-overlay');
-    if (overlay) overlay.style.transform = `translate(${moveX}px, ${moveY}px)`;
-});
